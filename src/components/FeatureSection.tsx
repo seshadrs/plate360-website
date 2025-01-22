@@ -21,7 +21,7 @@ export function FeatureSection({ icon: Icon, title, description, imageUrls, reve
   }, [imageUrls.length]);
 
   return (
-    <div className={`flex items-center gap-12 py-16 max-w-md max-w-[1000px] mx-auto ${reverse ? 'flex-row-reverse' : ''}`}>
+    <div className={`flex items-center gap-12 py-16 max-w-md max-w-[1500px] mx-auto ${reverse ? 'flex-row-reverse' : ''}`}>
       <div className="flex-1 space-y-4">
         <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-100">
           <Icon className="w-6 h-6 text-indigo-600" />

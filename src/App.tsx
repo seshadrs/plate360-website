@@ -44,20 +44,10 @@ function App() {
         </header>
 
         {/* Pitch */}
-        <div className="text-center">
+        <div className="text-center px-4">
           <h2 className="text-3xl font-semibold text-gray-800 shimmer-text">
           Nutrition insights, in a class of its own.
           </h2>
-          {/* <br/> <br/>
-          <div className="flex justify-center gap-4 mt-2 mb-2">
-            <a
-              href="#download"
-              className="px-8 py-2 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition transform -rotate-3"
-            >
-              Launching soon on iOS  <br/>
-              <div className="text-gray-300 text-xs decoration-white underline-dotted grow-shrink-text">get early access</div>
-            </a>
-          </div> */}
         </div>
       </div>
       
@@ -136,10 +126,11 @@ function App() {
 
       {/* Sticky Banner */}
       <a href="https://forms.gle/cKmvyh2CjHu1Bi8h9" className="fixed bottom-0 left-0 right-0 bg-indigo-600 text-white py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 flex justify-between items-center max-w-md max-w-[750px] mx-auto">
           <div className="px-8 py-2 bg-white text-indigo-600 rounded-full font-semibold hover:bg-gray-100 transition">
             Launching on iOS 
           </div>
+          &nbsp; 
           <span className="text-md grow-shrink-text shimmer-text">get early access</span>
           &nbsp; 
         </div>
