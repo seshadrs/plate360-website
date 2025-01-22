@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes shimmer {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes grow-shrink {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.shimmer-text {
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    #ff7e5f 0%,   /* Coral */
+    #feb47b 20%,  /* Peach */
+    #ff7e5f 40%,  /* Coral */
+    #86a8e7 60%,  /* Light Blue */
+    #91eae4 80%,  /* Aqua */
+    #ff7e5f 100%  /* Coral */
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 10s linear infinite;
+}
+
+.shake-text {
+  display: inline-block;
+  animation: shake 1s ease-in-out infinite;
+}
+
+.grow-shrink-text {
+  display: inline-block;
+  animation: grow-shrink 2s ease-in-out infinite;
+}

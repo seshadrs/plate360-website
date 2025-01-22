@@ -1,77 +1,126 @@
 import React from 'react';
-import { Camera, Gauge, Search, PieChart, Utensils, Edit3 } from 'lucide-react';
+import { Eye, Camera, Gauge, SearchSlash, Target, PieChart, Utensils, Edit3, Trophy, BarChart } from 'lucide-react';
 import { FeatureSection } from './components/FeatureSection';
+
+// Import local images
+import img_alcohol from '../assets/images/alcohol.png';
+import img_caffeine from '../assets/images/caffeine.png';
+import img_macro_plate from '../assets/images/macro_plate.png';
+import img_camera_input_meal from '../assets/images/camera_input_meal.png';
+import img_charts_1 from '../assets/images/charts_1.png';
+import img_charts_2 from '../assets/images/charts_2.png';
+import img_edit_ingredients_muffin from '../assets/images/edit_ingredients_muffin.png';
+import food_salad from '../assets/images/food_salad.png';
+import img_example from '../assets/images/example.png';
+import img_goals from '../assets/images/goals.png';
+import img_meal_view from '../assets/images/meal_view.png';
+import img_measure_apple from '../assets/images/measure_apple.png';
+import img_measure_muffin from '../assets/images/measure_muffin.png';
+import img_nutrition_facts from '../assets/images/nutrition_facts.png';
+import img_nutrients from '../assets/images/nutrients.jpg';
+
+
+// Add more imports as needed
 
 function App() {
   return (
+    
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <header className="bg-gradient-to-b from-indigo-50 to-white">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto space-y-8">
-            <h1 className="text-6xl font-bold text-gray-900">
-              Plate
-              <span className="text-indigo-600"> 360</span>
-            </h1>
-            <p className="text-xl text-gray-600">
-            where Sci-fi meets Snack time
-            </p>
-            <div className="flex justify-center gap-4">
-              <a
-                href="#download"
-                className="px-8 py-4 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition"
-              >
-                Download on App Store
-              </a>
+
+      <div className="header-container">
+        {/* Hero Section */}
+        <header className="bg-gradient-to-b from-indigo-50 to-white">
+          <div className="container mx-auto px-4 py-10">
+            <div className="text-center max-w-4xl mx-auto space-y-1">
+              <h1 className="text-6xl font-bold text-gray-900">
+                Plate
+                <span className="text-indigo-600"> 360</span>
+              </h1>
+              <p className="text text-gray-400 drop-shadow-sm">
+                supper meets sci-fi ✨
+              </p>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
+        {/* Pitch */}
+        <div className="text-center">
+          <h2 className="text-3xl font-semibold text-gray-800 shimmer-text">
+          Nutrition insights, in a class of its own.
+          </h2>
+          {/* <br/> <br/>
+          <div className="flex justify-center gap-4 mt-2 mb-2">
+            <a
+              href="#download"
+              className="px-8 py-2 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition transform -rotate-3"
+            >
+              Launching soon on iOS  <br/>
+              <div className="text-gray-300 text-xs decoration-white underline-dotted grow-shrink-text">get early access</div>
+            </a>
+          </div> */}
+        </div>
+      </div>
+      
       {/* Features Section */}
-      <main className="container mx-auto px-4 py-20">
+      <main className="container mx-auto px-4 py-10">
         <FeatureSection
-          icon={Camera}
+          icon={Eye}
           title="If You Can See It, You Can Size It"
           description="Measure portion size in VR and let our Volume Intelligence take over."
-          gifUrl="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&q=80&w=800&h=800"
+          imageUrls={[img_measure_muffin, img_measure_apple]}
         />
         
         <FeatureSection
           icon={Gauge}
           title="Coffee to Cocktails, We've Got You"
-          description="13 nutrition factors including macros, micros, alcohol, caffeine and water."
-          gifUrl="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800&h=800"
+          description="32 nutrition factors including macros, alcohol, caffeine, minerals, vitamins and water."
+          imageUrls={[img_nutrients, img_alcohol, img_caffeine]}
           reverse
         />
 
         <FeatureSection
-          icon={Search}
+          icon={SearchSlash}
           title="Zero Search. Zero Scrolling"
           description="Log exactly what you eat, not the closest food in a database."
-          gifUrl="https://images.unsplash.com/photo-1651634983356-9e60163d3b79?auto=format&fit=crop&q=80&w=800&h=800"
+          imageUrls={[food_salad, img_camera_input_meal]}
         />
 
         <FeatureSection
           icon={PieChart}
           title="Watch Your Plate Come Alive"
-          description="Visualize meal portions and macros through images."
-          gifUrl="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800&h=800"
+          description="Visualize meal portion size and macros on the plate."
+          imageUrls={[img_macro_plate, img_example]}
           reverse
         />
 
         <FeatureSection
-          icon={Utensils}
+          icon={Camera}
           title="Snap. Snack. Done."
           description="Log with a picture of your meal or food item or nutrition label."
-          gifUrl="https://images.unsplash.com/photo-1472393365320-db77a5abbecc?auto=format&fit=crop&q=80&w=800&h=800"
+          imageUrls={[img_camera_input_meal, img_nutrition_facts]}
         />
 
         <FeatureSection
           icon={Edit3}
           title="Your Food, Your Facts"
           description="Edit the ingredients to update the nutrition."
-          gifUrl="https://images.unsplash.com/photo-1486887396153-fa416526c108?auto=format&fit=crop&q=80&w=800&h=800"
+          imageUrls={[img_edit_ingredients_muffin, food_salad]}
+          reverse
+        />
+
+
+        <FeatureSection
+          icon={Trophy}
+          title="Personalized Goals and Guidance"
+          description="Set your goals and learn which foods are on target and which are off."
+          imageUrls={[img_goals]}
+        />
+
+        <FeatureSection
+          icon={BarChart}
+          title="Slice and Dice Your Data"
+          description="Get a detailed breakdown of your nutrition and see how things are trending."
+          imageUrls={[img_charts_1, img_charts_2]}
           reverse
         />
       </main>
@@ -86,17 +135,16 @@ function App() {
       </footer>
 
       {/* Sticky Banner */}
-      <div className="fixed bottom-0 left-0 right-0 bg-indigo-600 text-white py-4">
+      <a href="https://forms.gle/cKmvyh2CjHu1Bi8h9" className="fixed bottom-0 left-0 right-0 bg-indigo-600 text-white py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <span className="text-lg font-semibold">Free to try</span>
-          <a
-            href="#download"
-            className="px-8 py-2 bg-white text-indigo-600 rounded-full font-semibold hover:bg-gray-100 transition"
-          >
-            Download on App Store
-          </a>
+          <div className="px-8 py-2 bg-white text-indigo-600 rounded-full font-semibold hover:bg-gray-100 transition">
+            Launching on iOS 
+          </div>
+          <span className="text-md grow-shrink-text shimmer-text">get early access</span>
+          &nbsp; 
         </div>
-      </div>
+      </a>
+    
     </div>
   );
 }
